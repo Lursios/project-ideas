@@ -7,4 +7,11 @@ then from there the output that we need to get can be seen in the sample output 
 #Project 1 
 Tokopedia Scraper the goal is we want to be able to get a certain items based on a search keyword we input the goal is to get as many data as possible then use that as a market research planning for a targeted product
 
+#Project 2
+NKClass Scraper the goal is to scrape as many data as possible from https://www.classnk.com/register/regships/regships.aspx the goal is to get a list of ships depending on the type of ship we want to search 
+The End Goal of This is to scrape data from all ship registry websites and create a ship database that can be used by everybody so a kaagle dataset is the end goal.
+
 #Project X 
+
+
+
