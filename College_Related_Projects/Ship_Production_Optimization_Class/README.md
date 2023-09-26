@@ -52,7 +52,7 @@ The ROV Method will rank the location value and from the rank it will return the
 P.S : For creating this project and solution i relied heavily on the paper [Hui Guo (2020) "Green scheduling optimization of ship plane block flow line considering
 carbon emission and noise" Computers & Industrial Engineering.](https://www.researchgate.net/publication/343220155_Green_scheduling_optimization_of_ship_plane_block_flow_line_considering_carbon_emission_and_noise) in case you're interested in looking at the original source.
 
-The python code can be found in the relative folder here.
+The python code can be found in the relative folder [here](https://github.com/Lursios/projects/blob/main/College_Related_Projects/Ship_Production_Optimization_Class/Particle_Swarm_UAS_Optimasi_Produksi_Kapal.ipynb)
 
 
 
