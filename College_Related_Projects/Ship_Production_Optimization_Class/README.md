@@ -4,7 +4,7 @@ at the end of the term we where asked to create and present a method that can so
 
 ## The Problem 
 
-When Naval Architects & Engineers constuct a ship the approach that is commonly used is the block consturction method, which is a method that divide the the ship into block sections ( the number of block depends on the size of the ship) and each yard will work creating the block which is then combine or the correct term is erected into one whole ship when all the block sections are finished constructed. you can see from the picture below on how each section distributed.
+When Naval Architects & Engineers constuct a ship the approach that is commonly used is the block construction method, which is a method that divide the the ship into block sections ( the number of block depends on the size of the ship) and each yard will work creating the block which is then combine or the correct term is erected into one whole ship when all the block sections are finished constructed. you can see from the picture below on how each section distributed.
 
 ![ship-breakdown-structure](https://github.com/Lursios/projects/blob/main/College_Related_Projects/Ship_Production_Optimization_Class/Assets/Units-and-blocks-of-ships-hull-in-an-exploded-view.png)
 
@@ -37,7 +37,7 @@ Since each of these behavioural variable needs to be predefined, we set the valu
   <li>Social Learning Factor = 0.3</li> 
 </ul>
 
-The Fitness Function has the same meaning as Objective Function but the term "Fitness" is oftenly used for heuristic algorithm since it's easier to remember by saying we measure how "fit" our solution with this function. for our problem the fitness calculate the current schedule ( which is the solution ) created time. 
+The Fitness Function has the same meaning as Objective Function but the term "Fitness" is oftenly used for heuristic algorithm since it's easier to remember by saying we measure how "fit" our solution with this function. for our problem the fitness calculate the current job schedule ( which is the solution ) time to finish all the work. 
 
 ![fitness-function formula](https://github.com/Lursios/projects/assets/88123655/7ecae77c-bbdf-4cce-a913-28b58a88b581)
 ![image](https://github.com/Lursios/projects/assets/88123655/3e120294-6a34-449b-95ce-6d7afb38c6b0)
