@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+
+<% posts.forEach(function(post) { %>  
+<%    if (post.postContent.length >= 100 && post.postTitle != "Home") { %>
+<%        postSliced = post.postContent.slice(0,100) + " ..."; %>
+        <h1><%= post.postTitle %></h1>
+        <p><%= postSliced %><a href="posts/<%=post._id %>"> Read More</a></p>
+<%    } else { %>
+        <h1><%= post.postTitle %></h1>
+        <p><%= post.postContent %></p>
+<%    };%>
+<% }); %>  
+
+
+<%-include("partials/footer"); -%>
+
+

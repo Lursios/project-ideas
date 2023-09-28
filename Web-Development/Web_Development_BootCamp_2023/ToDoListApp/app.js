@@ -17,7 +17,7 @@ app.set("view engine","ejs");
 app.use(express.static("public"));
 
 //Go live & Set up Database 
-mongoose.connect(`mongodb+srv://${userName}:${password}@cluster0.xwoxujl.mongodb.net/toDoTest`);
+mongoose.connect(`mongodb+srv://${userNamxe}:${password}@cluster0.xwoxujl.mongodb.net/toDoTest`);
 
 
 const taskSchema = mongoose.Schema({

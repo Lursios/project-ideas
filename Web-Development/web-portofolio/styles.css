@@ -1,0 +1,33 @@
+body {
+    background-color: #730C0C;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    min-height: 95vh;
+    width: auto;
+    height: auto;
+    /* background-color: yellow; */
+  }
+
+.personal-photo {
+    background-color: red;
+    text-align: center;
+    width: 45%;
+    height: 80%;
+  }
+.personal-photo #pic { 
+   width: fit-content;
+   height: fit-content; 
+}
+
+  .personal-bio {
+    background-color: aqua;
+    width: 45%;
+    height: 80%;
+  }
+
+  
