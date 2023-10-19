@@ -13,7 +13,8 @@ const init_orders = (sequelize, Types) => {
       },
       quantity: DataTypes.INTEGER,
       table_number: DataTypes.INTEGER,
-      menu_id: DataTypes.STRING
+      menu_id: DataTypes.STRING,
+      menu_name: DataTypes.STRING
     }, {
       sequelize,
       modelName: 'orders',

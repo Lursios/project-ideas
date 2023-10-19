@@ -2,14 +2,13 @@ import Order from "./OrderButton";
 import { fetchOrders,fetchMenus,fetchOrder} from "../../../service/dbService";
 import OrderSection from "./OrderSection";
 import TableSection from "./TableSection";
-import { NewOrder } from "./OrderSection";
 
 async function getOrders() {
     const orders = await fetchOrders();
     console.log(orders);
 };
 
-async function getId() {
+export async function getOrderId() {
     
     // Later for performance optimziation generate 5 number random then query based on that and return the null indexes so we query the database once and return 5 or more result for each call
     // var arr = [];  
@@ -31,14 +30,8 @@ async function getId() {
 }
 
 
-async function createOrder(orderData:any) {
+async function createOrder() {
     "use server"
-    console.log(orderData);
-    console.log("order has been created")
-    return "Order Created"
-}
-
-async function createOrder2() {
     console.log("order has been created");
 }
 
@@ -51,12 +44,9 @@ async function getValues() {
 
 export default async function OrderApp() {
     const Menus = await fetchMenus();
-    const orderId = await getId();
     return ( 
         <OrderSection
         Menus={Menus}
-        handleNewOrder={createOrder2}
-        OrderId = {orderId}
         />
     )
 }

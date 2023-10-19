@@ -1,27 +1,17 @@
 "use client"
-import { useState,useEffect } from "react"
+import { useState,useEffect} from "react"
 import OrderButton from "./OrderButton";
 import TableSection from "./TableSection";
 
 type MenusProp = {
     Menus: any[],
-    handleNewOrder : () => void
-    OrderId : String
-}
-
-export type NewOrder = {
-    menuName : string,
-    menuId : string,
-    orderQuantity : number,
-    tableNumber : number,
-    orderId : String
 }
 
 
-
-export default function OrderSection({Menus,handleNewOrder,OrderId}:MenusProp) {
+export default function OrderSection({Menus}:MenusProp) {
     const [tester,setTester] = useState("test");
-    const [orderData,setOrderData] = useState({menuName:"",menuId:"",orderQuantity:0,OrderId:OrderId,tableNumber:0})
+    const [orderData,setOrderData] = useState({menuName:"",menuId:"",orderQuantity:0,tableNumber:0})
+
 
     function menuOrderData(event:any) {
         const values = event.target.value.split(",");
@@ -49,7 +39,9 @@ export default function OrderSection({Menus,handleNewOrder,OrderId}:MenusProp) {
     }
 
     return (
+    
     <div className="m-4">
+     
         <TableSection
         handleTableNumber={getTableNumber}
         />
@@ -71,9 +63,9 @@ export default function OrderSection({Menus,handleNewOrder,OrderId}:MenusProp) {
             <OrderButton
             name={"Confirm Order"}
             orderData={orderData}
-            handleOrder = {handleNewOrder}
             />
         </div>
+        
     </div>
     )
-}
+}   

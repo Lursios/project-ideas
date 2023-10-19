@@ -2,6 +2,30 @@ import { menus as Menus, orders as Orders } from "../database/models";
 
 /// Order Section 
 
+export type NewOrder = {
+    menuName : string,
+    menuId : string,
+    orderQuantity : number,
+    tableNumber : number,
+    orderId : String
+}
+
+
+
+export async function newOrder(order:NewOrder) {
+    console.log(order);
+    const newOrder = await Orders.create({
+        menu_name: order.menuName,
+        menu_id: order.menuId,
+        quantity: order.orderQuantity,
+        id: order.orderId ,
+        table_number: order.tableNumber
+    })
+    console.log(newOrder.dataValues);   
+
+    return "Success"
+}
+
 export async function fetchOrders() {
     const orders = await Orders.findAll();
     return orders;
