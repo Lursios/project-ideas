@@ -21,6 +21,9 @@ module.exports = {
       menu_id: {
         type: Sequelize.STRING
       },
+      menu_name: {
+        type: Serielize.String
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
