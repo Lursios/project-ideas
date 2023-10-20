@@ -55,7 +55,7 @@ export default async function Menu() {
         <form action={createMenu} className="grid grid-cols-5 gap-2">
             <input  name= "menuName" type="text" placeholder="Tambahkan Menu Disini ... " className="input input-bordered input-primary w-full max-w-xs" />
             <input name= "menuPrice"type="text" placeholder="Tambahkan Harga Disini ... " className="input input-bordered input-primary w-full max-w-xs" />
-            <button className="btn btn-primary">Add</button>
+            <button className="btn btn-primary bg-blue-500">Add</button>
         </form>
         <div className="overflow-x-auto">
             <table className="table">

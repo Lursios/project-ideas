@@ -1,6 +1,27 @@
 import { menus as Menus, orders as Orders } from "../database/models";
 
+// Cashier Section 
+export async function clearTable(tableId:number) {
+    const clearedTable = await Orders.destroy({where:{table_number:tableId}});
+    return clearedTable;
+}
+
+export async function fetchTableOrderData() {
+    const orderData = await Orders.findAll({
+        include: Menus,
+    });
+    const ordersValues:any[] = orderData.map((order)=> order.get({plain:true}))
+    return ordersValues;
+}
+
+
 /// Order Section 
+
+export async function deleteOrders() {
+    const deletedOrders = await Orders.destroy({truncate:true});
+    console.log(deletedOrders)
+    return "Orders has been succesfully removed"
+}
 
 export type NewOrder = {
     menuName : string,
@@ -28,7 +49,8 @@ export async function newOrder(order:NewOrder) {
 
 export async function fetchOrders() {
     const orders = await Orders.findAll();
-    return orders;
+    const ordersValues:any[] = orders.map((order)=> order.dataValues)
+    return ordersValues;
 };
 
 export async function fetchOrder(id:String) {

@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Model, DataTypes } from "sequelize";
 import connection from "../connection";
+import { menus as Menus } from ".";
 
 const init_orders = (sequelize, Types) => {
   class orders extends Model {}
@@ -19,6 +20,7 @@ const init_orders = (sequelize, Types) => {
       sequelize,
       modelName: 'orders',
     });
+  orders.belongsTo(Menus,{foreignKey:"menu_id"})
     return orders;
   };
 

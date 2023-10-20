@@ -1,6 +1,6 @@
 import { NextRequest,NextResponse } from 'next/server';
 import { redirect } from 'next/navigation';
-import { type NewOrder, newOrder } from '../../../../service/dbService';
+import { type NewOrder, newOrder, clearTable } from '../../../../service/dbService';
 import { getOrderId } from '@/app/order/page';
 
  
@@ -16,8 +16,6 @@ export async function GET(req: NextRequest,) {
     orderId: orderId,
     tableNumber:parseInt(searchParams.get("tableNumber")!) // convert to number
   }
-
-  console.log(orderData);
   const currentOrder = await newOrder(orderData);
 
   if (currentOrder != "Success") {
@@ -28,6 +26,14 @@ export async function GET(req: NextRequest,) {
   redirect(url);
 }
 
+export async function DELETE(req: NextRequest,) {
+  const searchParams = req.nextUrl.searchParams;
+  const id = parseInt(searchParams.get("id")!);
+  if (!id) return NextResponse.json({"message" : "we need your id pal !"})
+  clearTable(id);
+  const url = "/kasir"
+  return NextResponse.json("This works")
+}
 // export default async function handler(req:Request, res:Response) {
 //     console.log(req.method);
 //     if (req.method === 'GET') {

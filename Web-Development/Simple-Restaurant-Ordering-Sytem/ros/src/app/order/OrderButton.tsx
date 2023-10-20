@@ -9,9 +9,6 @@ type ordersProps = {
 }
 
 
-
-
-
 export default function OrderButton({name,orderData}:ordersProps) {
     const router = useRouter()
     
@@ -26,13 +23,6 @@ export default function OrderButton({name,orderData}:ordersProps) {
     // const orderDataCompleted = () => {if (orderData.menuName != "" && orderData.orderQuantity != 0 && orderData.tableNumber != 0) {setDisabled(false)}};
 
     // useEffect(() => orderDataCompleted)
-
-    function handleButton() {
-        console.log("new order created");
-        console.log(orderData);
-
-    };
-    
     return (
         <button onClick={(e)=>handleClick(e)} className="btn btn-md bg-blue-500 text-white" disabled={isDisabled}>
         {name}
