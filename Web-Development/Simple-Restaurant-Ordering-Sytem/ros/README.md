@@ -1,6 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## General Info 
+
+Build with the Newest Version of Next JS 13. The language used is Typescript-ish and for the database I use PostgresSQL with Sequilize as the ORM. Styling with Tailwind CSS with help from DaisyUI.
+
+Thank you for the Challenge !
+
 
 ## Getting Started
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
