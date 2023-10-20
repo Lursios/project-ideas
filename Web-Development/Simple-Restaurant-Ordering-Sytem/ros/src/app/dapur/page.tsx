@@ -1,3 +1,14 @@
-export default function Kitchen() {
-    return (<h1>Making Delicious Fully Cooked Meal in the Kitchen Just for You !</h1>)
+import KitchenOrders from "./KitchenOrders";
+import { fetchOrders } from "../../../service/dbService";
+
+export default async function Kitchen() {
+    const Orders = await fetchOrders()
+    return (
+    <div>
+        <KitchenOrders
+        kitchenOrders = {Orders}
+        />
+    </div>
+    
+    )
 }

@@ -1,13 +1,14 @@
 import Link from "next/link"
 import Button from "./Button"
-import { deleteMenus } from "../../service/dbService"
+import { deleteMenus,deleteOrders } from "../../service/dbService"
 import { redirect } from "next/navigation";
 
 
 async function reset() {
     "use server"
-    const result = await deleteMenus();
-    console.log("Deleted All Menus")
+    const resultMenus = await deleteMenus();
+    const resultOrder = await deleteOrders();
+    console.log("Deleted All Menus & Orders")
     redirect("/menu")
 }
 

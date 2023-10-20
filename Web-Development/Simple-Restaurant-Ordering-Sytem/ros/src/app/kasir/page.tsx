@@ -1,3 +1,12 @@
-export default function Cashier() {
-    return (<h1>Checking out your bill for the delicious meal !</h1>)
+import { Kasir } from "./Kasir";
+import { fetchTableOrderData } from "../../../service/dbService";
+
+
+export default async function Cashier() {
+    const  currentTableOrder:any = await fetchTableOrderData();
+    return (
+        <Kasir
+        tableOrders={currentTableOrder}
+        />
+    )
 }
